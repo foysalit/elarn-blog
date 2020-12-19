@@ -10,6 +10,7 @@ import { ThemeProvider } from "react-native-magnus";
 const ElarnTheme = {
   colors: {
     pink900: '#D84343',
+    pink500: '#D59999'
   }
 }
 

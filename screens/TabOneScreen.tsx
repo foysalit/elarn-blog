@@ -2,10 +2,13 @@ import * as React from 'react';
 import Constants from "expo-constants";
 import {Avatar, Div, Icon, Input, Text} from "react-native-magnus";
 
-import { categories, CategoryCard } from '../components/CategoryCard';
+import { CategoryCard } from '../components/CategoryCard';
 import {ScrollView} from "react-native";
+import {StackScreenProps} from "@react-navigation/stack";
+import {ListHeader} from "../components/ListHeader";
+import {categories} from "../types";
 
-export default function TabOneScreen() {
+export default function TabOneScreen({ navigation }: StackScreenProps<any>) {
   return (
       <ScrollView>
         <Div px={25}>
@@ -29,13 +32,16 @@ export default function TabOneScreen() {
                     prefix={<Icon name="search" color="gray900" fontFamily="Feather" />}
                 />
             </Div>
-            <Div row pb={10} justifyContent="space-between" alignItems="center">
-            <Text fontWeight="bold" fontSize="3xl">Popular</Text>
-            <Text fontWeight="bold" fontSize="lg">See all</Text>
-        </Div>
+            <ListHeader title="Popular" />
             <Div row flexWrap="wrap" justifyContent="space-between">
                 {categories.map((category) => (
-                    <CategoryCard {...category} />
+                    <CategoryCard
+                        {...category}
+                        onPress={() => navigation.navigate('TabOne', {
+                            screen: 'CourseDetailScreen',
+                            params: {category}
+                        })}
+                    />
                 ))}
             </Div>
         </Div>

@@ -4,11 +4,13 @@
     <list default="true" id="2bb92ad8-9539-4bae-a5a8-476f3fe080be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/Colors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/Colors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/illustration_one.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/illustration_one.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/illustration_three.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/illustration_three.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/illustration_two.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/illustration_two.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CategoryCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CategoryCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation/BottomTabNavigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/BottomTabNavigator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/TabOneScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/TabOneScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/types.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +56,7 @@
       <workItem from="1607646525609" duration="2666000" />
       <workItem from="1607730972716" duration="1374000" />
       <workItem from="1607958941092" duration="108000" />
-      <workItem from="1608377505131" duration="3902000" />
+      <workItem from="1608377505131" duration="13261000" />
     </task>
     <servers />
   </component>
