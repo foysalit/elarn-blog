@@ -75,12 +75,16 @@ function TabBarIcon(props: { name: string; color: string }) {
 const TabOneStack = createStackNavigator<TabOneParamList>();
 
 function TabOneNavigator() {
-  return (
+    const colorScheme = useColorScheme();
+
+    return (
     <TabOneStack.Navigator>
       <TabOneStack.Screen
         name="TabOneScreen"
         component={TabOneScreen}
-        options={{ headerTitle: 'Tab One Title' }}
+        options={{
+            headerShown: false
+        }}
       />
     </TabOneStack.Navigator>
   );
@@ -94,7 +98,9 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+        options={{
+            headerTitle: 'Tab Two Title'
+        }}
       />
     </TabTwoStack.Navigator>
   );

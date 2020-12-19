@@ -1,32 +1,44 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import Constants from "expo-constants";
+import {Avatar, Div, Icon, Input, Text} from "react-native-magnus";
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+import { categories, CategoryCard } from '../components/CategoryCard';
+import {ScrollView} from "react-native";
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
-    </View>
+      <ScrollView>
+        <Div px={25}>
+            <Div mt={Constants.statusBarHeight} row justifyContent={"space-between"} alignItems="center">
+                <Div>
+                    <Div row>
+                        <Text fontSize="5xl" mr={5}>Hi</Text>
+                        <Text fontSize="5xl" fontWeight="bold">Sheila</Text>
+                    </Div>
+                    <Text fontSize="lg">Let's upgrade your skill</Text>
+                </Div>
+                <Avatar shadow={1} source={{uri: 'https://i.pravatar.cc/300'}}/>
+            </Div>
+            <Div my={30}>
+                <Input
+                    py={15}
+                    px={25}
+                    bg="white"
+                    rounded={30}
+                    placeholder="Search Class"
+                    prefix={<Icon name="search" color="gray900" fontFamily="Feather" />}
+                />
+            </Div>
+            <Div row pb={10} justifyContent="space-between" alignItems="center">
+            <Text fontWeight="bold" fontSize="3xl">Popular</Text>
+            <Text fontWeight="bold" fontSize="lg">See all</Text>
+        </Div>
+            <Div row flexWrap="wrap" justifyContent="space-between">
+                {categories.map((category) => (
+                    <CategoryCard {...category} />
+                ))}
+            </Div>
+        </Div>
+      </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});

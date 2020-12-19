@@ -3205,7 +3205,7 @@ expo-asset@~8.2.1:
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
-expo-constants@~9.3.0, expo-constants@~9.3.3:
+expo-constants@~9.3.3:
   version "9.3.4"
   resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-9.3.4.tgz#0fc8b6dca8feb6ddf095f016d4854f9f41e839f8"
   integrity sha512-tZrZ4Ohdf9YWQK0dI2qU+ArugFaTrotFHmcZg12ehMIeJCy0xkPcEQpxhCECdrbD8zNiyGRog9jEA0dxWI7j9Q==
