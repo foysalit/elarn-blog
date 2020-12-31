@@ -37,9 +37,8 @@ export default function TabOneScreen({ navigation }: StackScreenProps<any>) {
                 {categories.map((category) => (
                     <CategoryCard
                         {...category}
-                        onPress={() => navigation.navigate('TabOne', {
-                            screen: 'CourseDetailScreen',
-                            params: {category}
+                        onPress={() => navigation.navigate('CourseDetailScreen', {
+                            category
                         })}
                     />
                 ))}

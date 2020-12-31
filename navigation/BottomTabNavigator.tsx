@@ -8,8 +8,6 @@ import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
-import CourseDetailScreen from "../screens/CourseDetail";
-import {Button, Div} from "react-native-magnus";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -77,8 +75,6 @@ function TabBarIcon(props: { name: string; color: string }) {
 const TabOneStack = createStackNavigator<TabOneParamList>();
 
 function TabOneNavigator() {
-    const colorScheme = useColorScheme();
-
     return (
     <TabOneStack.Navigator>
       <TabOneStack.Screen
@@ -87,19 +83,6 @@ function TabOneNavigator() {
         options={{
             headerShown: false
         }}
-      />
-      <TabOneStack.Screen
-          name="CourseDetailScreen"
-          component={CourseDetailScreen}
-          options={{
-              headerTransparent: true,
-              headerBackTitleVisible: false,
-              headerTitle: '',
-              headerLeft: props =>
-                  <Button bg="transparent" p="none" {...props} ml={20}>
-                      <Ionicons name="arrow-back" size={30} />
-                  </Button>
-          }}
       />
     </TabOneStack.Navigator>
   );

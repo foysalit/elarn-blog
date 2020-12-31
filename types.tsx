@@ -1,6 +1,7 @@
 export type RootStackParamList = {
   Root: undefined;
   NotFound: undefined;
+  CourseDetailScreen: { category: Category};
 };
 
 export type BottomTabParamList = {
@@ -12,7 +13,6 @@ export type BottomTabParamList = {
 
 export type TabOneParamList = {
   TabOneScreen: undefined;
-  CourseDetailScreen: { category: Category };
 };
 
 export type TabTwoParamList = {

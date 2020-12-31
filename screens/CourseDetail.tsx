@@ -1,16 +1,17 @@
 import * as React from 'react';
 import {ScrollView} from "react-native";
 import { useHeaderHeight } from '@react-navigation/stack';
-import {Div, Icon, Image, Text} from "react-native-magnus";
+import {Button, Div, Icon, Image, Text} from "react-native-magnus";
 import {StackScreenProps} from "@react-navigation/stack";
 import {ListHeader} from "../components/ListHeader";
 import {CourseVideo} from "../components/CourseVideo";
-import {Category, TabOneParamList} from "../types";
+import {RootStackParamList} from "../types";
 
-export default function CourseDetailScreen({route}: StackScreenProps<TabOneParamList, 'CourseDetailScreen'>) {
-    const { category }: { category: Category } = route.params;
+export default function CourseDetailScreen({route}: StackScreenProps<RootStackParamList, 'CourseDetailScreen'>) {
+    const {category} = route.params;
     const headerHeight = useHeaderHeight();
     return (
+        <>
         <ScrollView style={{marginTop: headerHeight}}>
             <Div px={25}>
                 <Div row mt={15} mb={15} justifyContent="space-between">
@@ -45,5 +46,9 @@ export default function CourseDetailScreen({route}: StackScreenProps<TabOneParam
                 </Div>
             </Div>
         </ScrollView>
+        <Button block bg="pink900" rounded="circle" mx={30} top={-30} pt={20} pb={15}>
+            Get the course
+        </Button>
+        </>
     );
 }
